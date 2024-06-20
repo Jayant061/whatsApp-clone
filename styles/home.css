@@ -202,7 +202,7 @@
         bottom: 0;
         left: 0;
         padding: 0.7em;
-        min-width: calc(100% - 2em);
+        min-width: calc(100% - 1.4em);
         background-color: var(--nav-bgc);
         display: flex;
         align-items: center;
