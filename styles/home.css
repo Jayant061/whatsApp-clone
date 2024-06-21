@@ -24,6 +24,7 @@
   display: flex;
   justify-content: start;
   font-family: Inter;
+  /* overflow: scroll; */
   .asset-icon{
     width: 1.5em;
   }
@@ -37,7 +38,7 @@
   .sidebar{
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
+    height: 100vh;
     background-color: var(--sidebar-bgc);
     border-right: 1px solid var(--border-clr);
     nav{
@@ -110,6 +111,8 @@
     .chats{
       display: flex;
       flex-direction: column;
+      height: 500px;
+      /* flex: 1; */
       overflow:auto;
       .chat{
         padding: 0;
@@ -228,6 +231,78 @@
         }
       }
 
+    }
+
+    .rightside{
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        .content{
+          width: 80%;
+          max-width: 560px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 28px;
+          img{
+            width:320px;
+          }
+          .textcontents{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            color: var(--chat-username-color);
+            font-weight: 200;
+            font-size: 1rem;
+          }
+          h1{
+            font-weight: 300;
+            font-size: 2rem;
+            line-height: 2.5rem;
+          }
+          .button{
+            padding: 10px 0;
+            button{
+              font-weight: bold;
+              cursor: pointer;
+              padding: 10px 20px;
+              border-radius: 20px;
+              border:none;
+              color: var(--nav-bgc);
+              background-color: #01b487;
+            }
+            button:hover{
+              background-color: #06CF9C;
+
+            }
+          }
+        }
+      }
+      .note-below{
+        position: absolute;
+        width: 100%;
+        bottom: 40px;
+        text-align: center;
+        color: rgb(84, 101, 111);
+        right: 0;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        img{
+
+          width: 14px;
+        }
+      }
     }
   }
 
